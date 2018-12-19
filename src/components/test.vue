@@ -1,9 +1,11 @@
 <template>
     <div class='test-demo'>
         <div class='test' @click='click'>
-            <span class='text'>{{text}}</span>
+            <input class='text'>{{text}}</input>
+            <input class='text1'>{{text}}</input>
+            <input class='text2'>{{text}}</input>
         </div>
-        <div class='test2' v-show='status'>
+        <div class='test2' v-show='showText'>
             <span class='text2'>{{clickCount}}</span>
         </div>
     </div>
@@ -19,12 +21,21 @@
                 status: true
             }
         },
+        computed: {
+            showText() {
+
+            }
+        }
+        mounted() {
+            console.log('mounted');
+        },
+        watch: {
+
+        }
         methods: {
             click() {
                 console.log('clickCount:', this.clickCount);
                 console.log('status:', !this.status);
-                // ++this.clickCount;
-                // this.status = !this.status;
             }
         }
     }

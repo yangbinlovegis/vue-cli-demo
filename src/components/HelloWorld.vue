@@ -89,7 +89,6 @@
 
 <script>
     import Router from '../router/index';
-
     let  i = 0;
 export default {
   name: 'HelloWorld',
@@ -124,15 +123,18 @@ export default {
   },
   beforeCreate() {
     console.log('beforeCreate');
+    console.log('this.msg = ', this.msg);
   },
   created() {
     console.log('created');
+    console.log('this.msg = ', this.msg);
   },
   beforeMount() {
     console.log('beforeMount');
   },
   mounted() {
     console.log('mounted');
+    console.log('this.msg = ', this.msg);
   },
   beforeUpdate() {
     console.log('beforeUpdate', this.demoData);
